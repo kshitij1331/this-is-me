@@ -1,4 +1,4 @@
-# Kshitij Choubey — Portfolio Website
+# Kshitij Choubey — PORTFOLIO WEBSITE
 
 A single-page portfolio built with **Next.js 15**, **React**, **Tailwind CSS v4**, and **Framer Motion**. Dark theme with yellow accents, populated from CV content.
 
