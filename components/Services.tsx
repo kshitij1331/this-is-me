@@ -27,20 +27,20 @@ export default function Services() {
           {skillGroups.map((group) => {
             const isOpen = openId === group.id;
             return (
-              <div key={group.id}>
+              <div key={group.id} className="transition-all duration-300">
                 <button
                   type="button"
                   onClick={() => toggle(group.id)}
-                  className="flex w-full items-center justify-between py-6 text-left"
+                  className="group flex w-full items-center justify-between py-6 text-left hover:pl-2 transition-all duration-300"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-lg font-semibold text-white sm:text-xl">
+                  <span className="text-lg font-semibold text-white sm:text-xl group-hover:text-accent transition-colors">
                     {group.title}
                   </span>
                   <ChevronDown
                     size={20}
-                    className={`shrink-0 text-muted transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
+                    className={`shrink-0 text-accent transition-all duration-300 ${
+                      isOpen ? "rotate-180" : "group-hover:translate-y-1"
                     }`}
                   />
                 </button>
@@ -54,19 +54,21 @@ export default function Services() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="mb-6 rounded-[12px] bg-surface p-6 sm:p-8">
+                      <div className="mb-6 rounded-[12px] bg-gradient-to-br from-surface to-surface-light p-6 sm:p-8 card-hover border border-accent/10">
                         <p className="mb-6 text-sm leading-relaxed text-muted">
                           {group.description}
                         </p>
                         <ul className="grid gap-3 sm:grid-cols-2">
                           {group.items.map((item) => (
-                            <li
+                            <motion.li
                               key={item}
-                              className="flex items-start gap-2 text-sm text-white/80"
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              className="flex items-start gap-2 text-sm text-white/80 group-hover:text-white transition-colors"
                             >
                               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                               {item}
-                            </li>
+                            </motion.li>
                           ))}
                         </ul>
                       </div>

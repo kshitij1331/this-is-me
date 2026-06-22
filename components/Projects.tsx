@@ -36,11 +36,13 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group overflow-hidden rounded-[12px] border border-white/5 bg-surface lg:row-span-2"
+            className="group card-hover overflow-hidden rounded-[12px] border border-white/5 bg-surface lg:row-span-2"
           >
-            <div className="flex h-48 items-center justify-center bg-gradient-to-br from-surface-light to-black sm:h-64">
-              <div className="text-center">
-                <div className="mx-auto mb-4 flex h-20 w-32 items-center justify-center rounded-lg border border-white/10 bg-black/50">
+            <div className="relative h-48 items-center justify-center bg-gradient-to-br from-accent/10 to-transparent sm:h-64">
+              <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity" 
+                   style={{backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(245, 197, 24, 0.15) 1px, transparent 1px)', backgroundSize: '20px 20px'}}></div>
+              <div className="relative text-center">
+                <div className="mx-auto mb-4 flex h-20 w-32 items-center justify-center rounded-lg border border-white/10 bg-black/50 backdrop-blur-sm group-hover:border-accent/40 transition-colors">
                   <span className="text-2xl font-bold text-accent">CIS</span>
                 </div>
                 <p className="text-xs uppercase tracking-widest text-muted">
@@ -52,7 +54,7 @@ export default function Projects() {
               <p className="mb-2 text-xs font-medium uppercase tracking-widest text-accent">
                 {featured.tech}
               </p>
-              <h3 className="mb-3 text-xl font-bold text-white sm:text-2xl">
+              <h3 className="mb-3 text-xl font-bold text-white sm:text-2xl group-hover:text-accent transition-colors">
                 {featured.title}
               </h3>
               <p className="mb-6 text-sm leading-relaxed text-muted">
@@ -62,7 +64,7 @@ export default function Projects() {
                 {featured.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="flex items-start gap-2 text-sm text-white/70"
+                    className="flex items-start gap-2 text-sm text-white/70 group-hover:text-white/90 transition-colors"
                   >
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     {bullet}
@@ -73,7 +75,7 @@ export default function Projects() {
                 href={featured.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-[12px] bg-accent px-5 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-[12px] bg-accent px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/50"
               >
                 View on GitHub
                 <ArrowUpRight size={16} />
@@ -86,17 +88,20 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="overflow-hidden rounded-[12px] border border-white/5 bg-surface"
+            className="group card-hover overflow-hidden rounded-[12px] border border-white/5 bg-surface"
           >
-            <div className="flex h-40 items-center justify-center bg-gradient-to-br from-surface-light to-black">
-              <div className="flex gap-3">
+            <div className="relative h-40 items-center justify-center bg-gradient-to-br from-accent/10 to-transparent">
+              <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity" 
+                   style={{backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(245, 197, 24, 0.15) 1px, transparent 1px)', backgroundSize: '20px 20px'}}></div>
+              <div className="relative flex gap-3">
                 {["TF", "K8s", "Git"].map((label) => (
-                  <div
+                  <motion.div
                     key={label}
-                    className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-black/50 text-xs font-bold text-accent"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-black/50 text-xs font-bold text-accent backdrop-blur-sm"
                   >
                     {label}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -104,7 +109,7 @@ export default function Projects() {
               <p className="mb-2 text-xs font-medium uppercase tracking-widest text-accent">
                 {secondary.tech}
               </p>
-              <h3 className="mb-3 text-lg font-bold text-white">
+              <h3 className="mb-3 text-lg font-bold text-white group-hover:text-accent transition-colors">
                 {secondary.title}
               </h3>
               <p className="mb-4 text-sm leading-relaxed text-muted">
@@ -114,7 +119,7 @@ export default function Projects() {
                 href={secondary.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-accent-hover"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent transition-all hover:text-accent-hover hover:gap-3"
               >
                 View on GitHub
                 <ArrowUpRight size={16} />

@@ -27,10 +27,10 @@ export default function Certifications() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="rounded-[12px] border border-white/5 bg-surface px-5 py-4"
+                  className="group card-hover rounded-[12px] border border-white/5 bg-gradient-to-r from-surface to-surface-light px-5 py-4 hover:border-accent/30"
                 >
-                  <p className="text-sm font-semibold text-white">{cert.name}</p>
-                  <p className="text-xs text-muted">{cert.issuer}</p>
+                  <p className="text-sm font-semibold text-white group-hover:text-accent transition-colors">{cert.name}</p>
+                  <p className="text-xs text-muted group-hover:text-white/70 transition-colors">{cert.issuer}</p>
                 </motion.div>
               ))}
             </div>
@@ -48,17 +48,20 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-[12px] border border-white/5 bg-surface p-6"
+              className="group card-hover rounded-[12px] border border-white/5 bg-gradient-to-br from-surface to-surface-light p-6 hover:border-accent/30"
             >
-              <p className="mb-1 text-lg font-semibold text-white">
+              <p className="mb-1 text-lg font-semibold text-white group-hover:text-accent transition-colors">
                 {education.degree}
               </p>
-              <p className="mb-2 text-sm text-muted">{education.university}</p>
+              <p className="mb-2 text-sm text-muted group-hover:text-white/70 transition-colors">{education.university}</p>
               <div className="flex items-center gap-4 text-sm">
-                <span className="text-muted">{education.period}</span>
-                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                <span className="text-muted group-hover:text-white/60 transition-colors">{education.period}</span>
+                <motion.span 
+                  whileHover={{ scale: 1.05 }}
+                  className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent group-hover:bg-accent/20 transition-colors"
+                >
                   CGPA: {education.cgpa}
-                </span>
+                </motion.span>
               </div>
             </motion.div>
           </div>

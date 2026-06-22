@@ -9,7 +9,10 @@ function MarqueeTrack({ ariaHidden }: { ariaHidden?: boolean }) {
       {techStack.map((tech) => (
         <span
           key={tech}
-          className="text-lg font-semibold uppercase tracking-widest text-white/20"
+          className="group text-lg font-semibold uppercase tracking-widest text-white/20 hover:text-accent/50 transition-all duration-300 cursor-default"
+          style={{
+            textShadow: 'hover ? 0 0 8px rgba(245, 197, 24, 0.2) : none'
+          }}
         >
           {tech}
         </span>
@@ -20,7 +23,7 @@ function MarqueeTrack({ ariaHidden }: { ariaHidden?: boolean }) {
 
 export default function TechMarquee() {
   return (
-    <section className="overflow-hidden border-y border-white/5 py-8">
+    <section className="overflow-hidden border-y border-white/5 bg-gradient-to-r from-transparent via-accent/5 to-transparent py-8">
       <div className="flex w-max animate-marquee">
         <MarqueeTrack />
         <MarqueeTrack ariaHidden />

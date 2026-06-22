@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 import { navItems, personal } from "@/lib/data";
 
 export default function Header() {
@@ -62,27 +63,28 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => {
-            const id = item.href.replace("#", "");
-            const isActive = activeSection === id;
-            return (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className={`text-xs font-semibold tracking-widest transition-colors ${
-                  isActive ? "text-accent" : "text-muted hover:text-white"
-                }`}
-              >
-                {item.label}
-              </a>
-            );
-          })}
-        </nav>
+          <nav className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => {
+              const id = item.href.replace("#", "");
+              const isActive = activeSection === id;
+              return (
+                <motion.a
+                  key={item.href}
+                  whileHover={{ scale: 1.05 }}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className={`text-xs font-semibold tracking-widest transition-all underline-accent ${
+                    isActive ? "text-accent" : "text-muted hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </motion.a>
+              );
+            })}
+          </nav>
 
         <button
           type="button"

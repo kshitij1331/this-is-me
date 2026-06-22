@@ -51,7 +51,7 @@ export const personal = {
     "DevOps and Automation Engineer with 4.9 years of experience automating, scaling, and securing enterprise hybrid cloud and Linux infrastructure across Azure and AWS environments. Proven track record of replacing manual infrastructure with robust, scalable Infrastructure as Code (IaC) and automated GitOps workflows. Expert in modern containerization, system hardening, rapid provisioning, and proactive production observability.",
   linkedin: "https://www.linkedin.com/in/kshitij-choubey-9a74a4124/",
   github: "https://github.com/kshitij1331",
-  profileImage: "https://avatars.githubusercontent.com/u/kshitij1331?v=4",
+  profileImage: "/my-image.png",
 };
 
 export const tags = [

@@ -16,21 +16,28 @@ export default function Highlights() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-[12px] border border-white/5 bg-surface p-6"
+              className="group card-hover rounded-[12px] border border-white/5 bg-gradient-to-br from-surface to-surface-light p-6 hover:border-accent/30"
             >
-              <div className="mb-4 flex gap-1">
+              <div className="mb-4 flex gap-1 group-hover:gap-2 transition-all">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
+                  <motion.div
                     key={i}
-                    size={16}
-                    className="fill-accent text-accent"
-                  />
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: i * 0.05 + index * 0.1 }}
+                  >
+                    <Star
+                      size={16}
+                      className="fill-accent text-accent group-hover:drop-shadow-lg"
+                      style={{ filter: 'drop-shadow(0 0 4px rgba(245, 197, 24, 0.5))' }}
+                    />
+                  </motion.div>
                 ))}
               </div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-accent">
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-accent group-hover:text-accent-hover transition-colors">
                 {item.metric}
               </p>
-              <p className="text-sm leading-relaxed text-muted">
+              <p className="text-sm leading-relaxed text-muted group-hover:text-white/90 transition-colors">
                 &ldquo;{item.quote}&rdquo;
               </p>
             </motion.div>
