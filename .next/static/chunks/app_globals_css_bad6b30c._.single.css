@@ -156,10 +156,6 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -620,10 +616,6 @@
     margin-top: calc(var(--spacing) * 2);
   }
 
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
@@ -664,8 +656,12 @@
     margin-bottom: calc(var(--spacing) * 16);
   }
 
-  .block {
-    display: block;
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
   }
 
   .flex {
@@ -870,6 +866,10 @@
 
   .overflow-hidden {
     overflow: hidden;
+  }
+
+  .rounded-\[10px\] {
+    border-radius: 10px;
   }
 
   .rounded-\[12px\] {
@@ -1114,6 +1114,10 @@
     padding-block: var(--spacing);
   }
 
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
@@ -1185,11 +1189,6 @@
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
 
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1213,11 +1212,6 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-
-  .leading-none {
-    --tw-leading: 1;
-    line-height: 1;
   }
 
   .leading-relaxed {
@@ -1561,6 +1555,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-white\/5:hover {
+      background-color: rgba(255, 255, 255, .05);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-white\/5:hover {
+        background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:pl-2:hover {
       padding-left: calc(var(--spacing) * 2);
     }
@@ -1694,13 +1700,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:text-7xl {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -1761,13 +1760,6 @@
     .lg\:text-6xl {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:text-8xl {
-      font-size: var(--text-8xl);
-      line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
 

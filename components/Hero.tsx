@@ -69,6 +69,13 @@ export default function Hero() {
               Let&apos;s Connect
               <ArrowUpRight size={18} />
             </motion.button>
+            <a
+              href="/Kshitij_Choubey.pdf"
+              download
+              className="ml-4 inline-flex items-center gap-2 rounded-[12px] border border-white/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5"
+            >
+              Download Resume
+            </a>
           </motion.div>
         </div>
       </div>

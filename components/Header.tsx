@@ -84,6 +84,13 @@ export default function Header() {
                 </motion.a>
               );
             })}
+            <a
+              href="/Kshitij_Choubey.pdf"
+              download
+              className="ml-2 inline-flex items-center gap-2 rounded-[10px] bg-accent px-3 py-2 text-xs font-semibold text-black transition-all hover:bg-accent-hover"
+            >
+              Resume
+            </a>
           </nav>
 
         <button
@@ -119,6 +126,13 @@ export default function Header() {
                 </a>
               );
             })}
+            <a
+              href="/Kshitij_Choubey.pdf"
+              download
+              className="text-sm font-semibold tracking-widest text-accent"
+            >
+              Download Resume
+            </a>
           </div>
         </nav>
       )}

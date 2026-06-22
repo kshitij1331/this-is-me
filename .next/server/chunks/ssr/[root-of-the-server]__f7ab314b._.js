@@ -361,27 +361,39 @@ function Header() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                         className: "hidden items-center gap-8 md:flex",
-                        children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["navItems"].map((item)=>{
-                            const id = item.href.replace("#", "");
-                            const isActive = activeSection === id;
-                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                whileHover: {
-                                    scale: 1.05
-                                },
-                                href: item.href,
-                                onClick: (e)=>{
-                                    e.preventDefault();
-                                    handleNavClick(item.href);
-                                },
-                                className: `text-xs font-semibold tracking-widest transition-all underline-accent ${isActive ? "text-accent" : "text-muted hover:text-white"}`,
-                                children: item.label
-                            }, item.href, false, {
+                        children: [
+                            __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["navItems"].map((item)=>{
+                                const id = item.href.replace("#", "");
+                                const isActive = activeSection === id;
+                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
+                                    whileHover: {
+                                        scale: 1.05
+                                    },
+                                    href: item.href,
+                                    onClick: (e)=>{
+                                        e.preventDefault();
+                                        handleNavClick(item.href);
+                                    },
+                                    className: `text-xs font-semibold tracking-widest transition-all underline-accent ${isActive ? "text-accent" : "text-muted hover:text-white"}`,
+                                    children: item.label
+                                }, item.href, false, {
+                                    fileName: "[project]/components/Header.tsx",
+                                    lineNumber: 71,
+                                    columnNumber: 17
+                                }, this);
+                            }),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "/Kshitij_Choubey.pdf",
+                                download: true,
+                                className: "ml-2 inline-flex items-center gap-2 rounded-[10px] bg-accent px-3 py-2 text-xs font-semibold text-black transition-all hover:bg-accent-hover",
+                                children: "Resume"
+                            }, void 0, false, {
                                 fileName: "[project]/components/Header.tsx",
-                                lineNumber: 71,
-                                columnNumber: 17
-                            }, this);
-                        })
-                    }, void 0, false, {
+                                lineNumber: 87,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/components/Header.tsx",
                         lineNumber: 66,
                         columnNumber: 11
@@ -396,18 +408,18 @@ function Header() {
                             size: 24
                         }, void 0, false, {
                             fileName: "[project]/components/Header.tsx",
-                            lineNumber: 96,
+                            lineNumber: 103,
                             columnNumber: 25
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             size: 24
                         }, void 0, false, {
                             fileName: "[project]/components/Header.tsx",
-                            lineNumber: 96,
+                            lineNumber: 103,
                             columnNumber: 43
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.tsx",
-                        lineNumber: 89,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this)
                 ]
@@ -420,31 +432,43 @@ function Header() {
                 className: "border-t border-white/5 bg-black px-6 py-4 md:hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-col gap-4",
-                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["navItems"].map((item)=>{
-                        const id = item.href.replace("#", "");
-                        const isActive = activeSection === id;
-                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: item.href,
-                            onClick: (e)=>{
-                                e.preventDefault();
-                                handleNavClick(item.href);
-                            },
-                            className: `text-sm font-semibold tracking-widest ${isActive ? "text-accent" : "text-muted"}`,
-                            children: item.label
-                        }, item.href, false, {
+                    children: [
+                        __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["navItems"].map((item)=>{
+                            const id = item.href.replace("#", "");
+                            const isActive = activeSection === id;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: item.href,
+                                onClick: (e)=>{
+                                    e.preventDefault();
+                                    handleNavClick(item.href);
+                                },
+                                className: `text-sm font-semibold tracking-widest ${isActive ? "text-accent" : "text-muted"}`,
+                                children: item.label
+                            }, item.href, false, {
+                                fileName: "[project]/components/Header.tsx",
+                                lineNumber: 114,
+                                columnNumber: 17
+                            }, this);
+                        }),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/Kshitij_Choubey.pdf",
+                            download: true,
+                            className: "text-sm font-semibold tracking-widest text-accent",
+                            children: "Download Resume"
+                        }, void 0, false, {
                             fileName: "[project]/components/Header.tsx",
-                            lineNumber: 107,
-                            columnNumber: 17
-                        }, this);
-                    })
-                }, void 0, false, {
+                            lineNumber: 129,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/components/Header.tsx",
-                    lineNumber: 102,
+                    lineNumber: 109,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Header.tsx",
-                lineNumber: 101,
+                lineNumber: 108,
                 columnNumber: 9
             }, this)
         ]
@@ -612,6 +636,16 @@ function Hero() {
                             }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
                                 lineNumber: 62,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "/Kshitij_Choubey.pdf",
+                                download: true,
+                                className: "ml-4 inline-flex items-center gap-2 rounded-[12px] border border-white/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5",
+                                children: "Download Resume"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Hero.tsx",
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this)
                         ]
